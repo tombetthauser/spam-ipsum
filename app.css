@@ -2,3 +2,7 @@ body {
 	text-align: center;
 	margin-top: 20%;
 }
+
+button {
+	cursor: pointer;
+}
