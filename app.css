@@ -8,14 +8,15 @@ button {
 	cursor: pointer;
 	margin-bottom: 40px;
 	margin-right: 5px;
-	background-color: white;
+	background-color: #ddd;
 	color: black;
-	border: solid 1px black;
-	font-size: 20px;
+	border: outset 3px #ddd;
+	font-size: 15px;
 	padding: 5px 35px;
-	border-radius: 5px;
+	border-radius: 0px;
 	font-weight: 50;
 	opacity: 1;
+	font-family: serif;
 }
 
 /*button:hover {
@@ -23,10 +24,11 @@ button {
 }
 */
 input {
-	font-size: 20px;
-	padding: 4px 15px;
-	color: rgba(0,0,0,.5);
+	font-size: 15px;
+	padding: 6px 15px;
+	color: rgba(0,0,0,.3);
 	font-weight: 50;
 	border: solid 1px lightgrey;
-	border-radius: 5px;
+	border-radius: 0px;
+	font-family: serif;
 }
