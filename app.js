@@ -7,12 +7,12 @@ const greetingsArray = allGreetings.split("   ");
 const sincerelysArray = allSincerelys.split("   ");
 const namesArray = allNames.split("   ");
 
-$(document).ready(function(){
-  $("button").click(function(){
+document.addEventListener("DOMContentLoaded", function(){
+  document.getElementById('button').onclick = function(){
   	let paragraphNumberInput = document.getElementById("paragraphNumberInput").value;
   	let paragraphNumberParsed = parseInt(paragraphNumberInput, 10);
-  	$("#p1").text("");
-  	$("#p1").append("<p>" + greetingsArray[(Math.round(Math.random() * (greetingsArray.length - 1)))] + "</p>"); 
+  	document.getElementById("p1").innerHTML = "";
+	document.getElementById("p1").innerHTML += ("<p>" + greetingsArray[(Math.round(Math.random() * (greetingsArray.length - 1)))] + "</p>");
   	if (paragraphNumberInput > 1){
 	  	let newText = "<p>";
 	  	for(i=0;i<paragraphNumberInput;i++){
@@ -24,7 +24,7 @@ $(document).ready(function(){
 		  	newText += "</p><p>";
 	  	};
 	  	newText += "</p>";
-		$("#p1").append(newText); 
+		document.getElementById("p1").innerHTML += (newText); 
   	} else {
 	  	let newText = "<p>";
 	  	for(i=0;i<3;i++){
@@ -36,20 +36,9 @@ $(document).ready(function(){
 		  	newText += "</p><p>";
 	  	};
 	  	newText += "</p>";
-		$("#p1").append(newText); 
+		document.getElementById("p1").innerHTML += (newText); 
   	}
-	$("#p1").append("<p>" + sincerelysArray[(Math.round(Math.random() * (sincerelysArray.length - 1)))] + "</p>"); 
-	$("#p1").append("<br><p>" + namesArray[(Math.round(Math.random() * (namesArray.length - 1)))] + "</p>"); 
-  });
+	document.getElementById("p1").innerHTML += ("<p>" + sincerelysArray[(Math.round(Math.random() * (sincerelysArray.length - 1)))] + "</p>"); 
+	document.getElementById("p1").innerHTML += ("<br><p>" + namesArray[(Math.round(Math.random() * (namesArray.length - 1)))] + "</p>"); 
+  };
 });
-
-
-// Why doesn't this work?
-
-// $(document).ready(function(){
-//   $("button").click(function(){
-//     $.get("spam.txt", function(data, status){
-//       console.log(data);
-//     });
-//   });
-// });
