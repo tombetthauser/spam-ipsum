@@ -31,7 +31,8 @@ input {
 	border: solid 1px lightgrey;
 	border-radius: 0px;
 	font-family: serif;
-	max-width: 25px;
+	width: 25px;
+	box-sizing: border-box;
 }
 
 #image {
