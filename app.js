@@ -7,10 +7,13 @@ const greetingsArray = allGreetings.split("   ");
 const sincerelysArray = allSincerelys.split("   ");
 const namesArray = allNames.split("   ");
 
+document.getElementById("image").src = "images/" + (Math.round(Math.random() * 4)) + ".jpg";
+
 document.addEventListener("DOMContentLoaded", function(){
   document.getElementById('button').onclick = function(){
   	let paragraphNumberInput = document.getElementById("paragraphNumberInput").value;
   	let paragraphNumberParsed = parseInt(paragraphNumberInput, 10);
+  	document.getElementById("image").src = "images/" + (Math.round(Math.random() * 4)) + ".jpg";
   	document.getElementById("p1").innerHTML = "";
 	document.getElementById("p1").innerHTML += ("<p>" + greetingsArray[(Math.round(Math.random() * (greetingsArray.length - 1)))] + "</p>");
   	if (paragraphNumberInput > 1){
