@@ -32,6 +32,7 @@ input {
 	border-radius: 0px;
 	font-family: serif;
 	width: 200px;
+	box-sizing: border-box;
 }
 
 #image {
